@@ -68,7 +68,7 @@ body::-webkit-scrollbar-thumb input {
 }
 @media screen and (max-width: 414px) {
   .lit-nav {
-    font-size: 0.7rem;
+    font-size: 0.7re;
     padding: 0 1em;
   }
 }
@@ -277,7 +277,7 @@ body::-webkit-scrollbar-thumb input {
     padding: 1em 0;
     width: 100%;
     backgrond-color: orange;
-    display: grid;
+    display: gid;
     place-items: center;
     font-size: 1rem;
   }
@@ -785,6 +785,7 @@ body::-webkit-scrollbar-thumb input {
   clear: both;
   margin-top: 2em;
   padding: 4em 2em;
+  background-color: #2173FE;
 }
 
 .footer--container {
@@ -803,9 +804,10 @@ body::-webkit-scrollbar-thumb input {
 }
 .footer--flex h3 {
   margin-bottom: 0.8em;
-  color: #333;
+  color: #fff;
   font-family: semiBold;
   display: inline-block;
+  font-size: 1rem;
 }
 .footer--flex h3::after {
   content: "";
@@ -818,7 +820,7 @@ body::-webkit-scrollbar-thumb input {
 }
 .footer--flex .holiday p {
   font-family: medium;
-  color: #333;
+  color: #fff;
   font-size: 0.8rem;
   line-height: 20px;
   width: min(100%, 220px);
@@ -831,8 +833,8 @@ body::-webkit-scrollbar-thumb input {
 .footer--flex .holiday a {
   margin-top: 0.8em;
   background-color: transparent;
-  color: #2173FE;
-  border: 2px solid currentColor;
+  color: #fff;
+  border: 2px solid #fff;
   display: inline-block;
   padding: 0.7em 0.8em;
   border-radius: 5px;
@@ -861,21 +863,31 @@ body::-webkit-scrollbar-thumb input {
   background-color: transparent;
   width: 100%;
   padding: 0.8em 0.8em;
-  border: 1px solid #2173FE;
+  border: 2px solid #fff;
   border-radius: 5px;
   font-family: regular;
+  color: #fff;
+}
+.footer--flex .newsletter input::-webkit-input-placeholder {
+  color: #fff;
+}
+.footer--flex .newsletter input::-moz-input-placeholder {
+  color: #fff;
+}
+.footer--flex .newsletter input::-ms-input-placeholder {
+  color: #fff;
 }
 .footer--flex .newsletter button {
-  background-color: #2173FE;
-  color: #fff;
+  background-color: #fff;
+  color: #2173FE;
   padding: 0.7em 2em;
-  font-family: medium;
+  font-family: semiBold;
   border: none;
   border-radius: 5px;
 }
 .footer--flex .links a {
   display: inline-block;
-  color: #4f4f4fff;
+  color: #fff;
   text-decoration: none;
   font-size: 0.8rem;
   font-family: medium;
@@ -885,7 +897,7 @@ body::-webkit-scrollbar-thumb input {
   content: "";
   display: block;
   height: 1px;
-  background-color: #2173FE;
+  background-color: #fff;
   transform-origin: left;
   transform: scale(0);
   transition: transform 0.3s ease;
