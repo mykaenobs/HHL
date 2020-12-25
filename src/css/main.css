@@ -848,7 +848,7 @@ body::-webkit-scrollbar-thumb input {
 }
 .footer--flex .newsletter p {
   font-family: medium;
-  color: #333;
+  color: #fff;
   font-size: 0.8rem;
   line-height: 20px;
   width: min(100%, 220px);
