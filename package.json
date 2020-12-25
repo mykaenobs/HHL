@@ -1,0 +1,21 @@
+{
+    "name": "HHL",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "pug": "pug -w pug -o views -P",
+      "sass": "sass --watch sass:src/css"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/mykaenobs/HHL.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/mykaenobs/HHL/issues"
+    },
+    "homepage": "https://github.com/mykaenobs/HHL#readme"
+  }
