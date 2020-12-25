@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+
 $primary: #fff;
 $lit-pri: #F4F8FF;
 $lighter-pri: #FDFEFF;
 $secondary: #2173FE;
 $bc: #EAEAEA;
-
 
 
 $text: #333;
@@ -59,34 +62,34 @@ $ts4: 1.4rem;
 }
 
 
-@font-face {
-    font-family: regular;
-    src: url('../fonts/Montserrat-Regular.ttf');
+// @font-face {
+//     font-family: regular;
+//     src: url('../fonts/Montserrat-Regular.ttf');
     
-}
+// }
 
-@font-face {
-    font-family: medium;
-    src: url('../fonts/Montserrat-Medium.ttf');
-}
+// @font-face {
+//     font-family: medium;
+//     src: url('../fonts/Montserrat-Medium.ttf');
+// }
 
-@font-face {
-    font-family: semiBold;
-    src: url('../fonts/Montserrat-SemiBold.ttf');
-}
+// @font-face {
+//     font-family: semiBold;
+//     src: url('../fonts/Montserrat-SemiBold.ttf');
+// }
 
-@font-face {
-    font-family: bold;
-    src: url('../fonts/Montserrat-Bold.ttf');
+// @font-face {
+//     font-family: bold;
+//     src: url('../fonts/Montserrat-Bold.ttf');
     
-}
+// }
 
 
 * {
     box-sizing: border-box;
     margin: 0;
     outline: none;
-    
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -97,7 +100,6 @@ body, html {
 
     scrollbar-width: thin;
     scrollbar-color: $secondary $primary;
-    
 }
     
 
@@ -139,7 +141,6 @@ body::-webkit-scrollbar-thumb {
     background-color: $primary;
     color: $txt3;
     font-size: $ts;
-    font-family: regular;
     padding: 0 2rem;
     box-shadow: 0 4px 4px rgba(0, 0, 0, .04);
 
@@ -149,7 +150,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     p {
-        font-family: semiBold;
+        font-weight: 500;
     }
 
     &--container{
@@ -163,7 +164,7 @@ body::-webkit-scrollbar-thumb {
 
         a {
             color: black;
-            font-family: semiBold;
+            font-weight: 500;
             font-size: $ts2;
             text-decoration: none;
             padding: 1.4em 1.5em;
@@ -174,6 +175,11 @@ body::-webkit-scrollbar-thumb {
             &:first-of-type{
                 background-color: $lit-pri;
                 color: $secondary;
+                
+
+                &:hover {
+                    background-color: darken($lit-pri, 5%);
+                }
             }
 
             &:last-of-type {
@@ -181,13 +187,9 @@ body::-webkit-scrollbar-thumb {
                 background-color: $secondary;
 
                 &:hover {
-                    background-color: darken($primary, 5%);
+                    background-color: darken($secondary, 10%);
                     text-decoration: none;
                 }
-            }
-
-            &:hover {
-                text-decoration: underline;
             }
         }
     }
@@ -369,7 +371,6 @@ $navWidth: 70px;
     }
 
     &--link {
-        font-family: medium;
         font-size: .7rem;
         color: $txt2;
         font-size: $ts3;
@@ -506,7 +507,7 @@ $imgHeight: 32em;
             width: 100%;
 
             h1 {
-                font-family: bold;
+                font-weight: 700;
                 font-size: clamp(1.8rem, 8vw, 3.5rem);
                 width: $maxWidth;
                 margin: 0 auto;
@@ -524,7 +525,7 @@ $imgHeight: 32em;
 
                     
             p {
-                font-family: medium;
+                font-weight: 500;
                 font-size: clamp(.7rem, 2vw, $ts);
                 width: min(100%, 500px);
                 line-height: 30px;
@@ -563,7 +564,7 @@ $imgHeight: 32em;
     
 
                 a {
-                    font-family: semiBold;
+                    font-weight: 600;
                     font-size: clamp(.7rem, 2vw, .8rem);
                     text-decoration: none;
                     background-color: white;
@@ -573,15 +574,25 @@ $imgHeight: 32em;
                     display: inline-block;
                     border-radius: 5px;
                     text-transform: uppercase;
+                    color: $secondary;
+                    transition: background .3s, transform .3s;
 
                     &:last-of-type {
                         background-color: transparent;
                         color: $primary;
+
+                        &:hover {
+                            background-color: $primary;
+                            color: $secondary;
+                            border-color: currentColor;
+                        }
                     }
 
                     &:hover {
-                        background-color: darken($primary, 10%);
-                        color: $text;
+                        background-color: darken($secondary, 10%);
+                        color: $primary;
+                        border-color: $secondary;
+                        transform: scale(1.2, 1.2);
                     }
 
                     @include medium {
@@ -671,7 +682,7 @@ $imgHeight: 32em;
         text-align: center;
         margin: 1em 0 0 0;
         font-size: 1.4rem;
-        font-family: bold;
+        font-weight: 700;
         text-transform: uppercase;  
         color: $txt;
     }
@@ -690,7 +701,7 @@ $imgHeight: 32em;
     .sub {
         font-size: $ts2;
         text-align: center;
-        font-family: medium;
+        font-weight: 500;
         color: $txt3;
     }
 
@@ -718,7 +729,7 @@ $imgHeight: 32em;
 
         a {
             text-align: center;
-            font-family: medium;
+            font-weight: 500;
             font-size: $ts3;
             color: $txt3;
             text-decoration: none;
@@ -791,7 +802,7 @@ $imgHeight: 32em;
         text-align: center;
         margin: 1em 0 0 0;
         font-size: 1.4rem;
-        font-family: bold;
+        font-weight: 700;
         text-transform: uppercase;
         color: $txt;
 
@@ -801,7 +812,6 @@ $imgHeight: 32em;
     }
 
     hr.line {
-        width: 10%;
         width: 40px;
         border: none;
         background-color: $secondary;
@@ -812,7 +822,7 @@ $imgHeight: 32em;
     .sub {
         font-size: $ts2;
         text-align: center;
-        font-family: medium;
+        font-weight: 500;
         color: $txt3;
     }
 
@@ -824,7 +834,7 @@ $imgHeight: 32em;
             background-color: $secondary;
             color: $primary;
             text-decoration: none;
-            font-family: Medium;
+            font-weight: 500;
             display: inline-block;
             padding: .5em 1em;
             border-radius: 35px;
@@ -880,7 +890,7 @@ $imgHeight: 32em;
         position: absolute;
         top: 1em;
         right: 1em;
-        font-family: medium;
+        font-weight: 500;
         font-size: .7rem;
         background-color: $secondary;
         padding: .5em 1em;
@@ -895,7 +905,7 @@ $imgHeight: 32em;
         width: 100%;
         height: 100%;
         color: $primary;
-        font-family: SemiBold;
+        font-weight: 600;
         text-align: center;
         display: flex;
         align-items: center;
@@ -953,7 +963,7 @@ $imgHeight: 32em;
     }
 
     &--price {
-        font-family: semiBold
+        font-weight: 600
     }
 
     hr.divide {
@@ -973,7 +983,7 @@ $imgHeight: 32em;
             display: inherit;
             align-items: center;
             gap: .5em;
-            font-family: medium;
+            font-weight: 500;
             color: #777;
         }
             
@@ -1016,7 +1026,7 @@ $imgHeight: 32em;
         h3 {
             margin-bottom: .8em;
             color: $primary;
-            font-family: semiBold;
+            font-weight: 600;
             display: inline-block;
             font-size: 1rem;
 
@@ -1035,7 +1045,7 @@ $imgHeight: 32em;
             }
 
             p {
-                font-family: medium;
+                font-weight: 500;
                 color: $primary;
                 font-size: .8rem;
                 line-height: 20px;
@@ -1056,7 +1066,7 @@ $imgHeight: 32em;
                 border-radius: 5px;
                 font-size: .8rem;
                 text-decoration: none;
-                font-family: medium;
+                font-weight: 500;
                 
                 i {
                     display: inline-block;
@@ -1067,7 +1077,7 @@ $imgHeight: 32em;
         
         .newsletter {
             p {
-                font-family: medium;
+                font-weight: 500;
                 color: $primary;
                 font-size: .8rem;
                 line-height: 20px;
@@ -1085,7 +1095,6 @@ $imgHeight: 32em;
                 padding: .8em .8em;
                 border: 2px solid $primary;
                 border-radius: 5px ;
-                font-family: regular;
                 color: $primary
             }
 
@@ -1105,7 +1114,7 @@ $imgHeight: 32em;
                 background-color: $primary;
                 color: $secondary;
                 padding: .7em 2em;
-                font-family: semiBold;
+                font-weight: 600;
                 border: none;
                 border-radius: 5px;
             }
@@ -1117,7 +1126,7 @@ $imgHeight: 32em;
                 color: $primary;
                 text-decoration: none;
                 font-size: .8rem;
-                font-family: medium;
+                font-weight: 500;
                 margin: .3em 0;
 
                 &::after {
@@ -1138,7 +1147,7 @@ $imgHeight: 32em;
     }
 
     .chat {
-        position: fixed ;
+        position: fixed;
         right: 2em;
         bottom: 2em;
 
@@ -1155,5 +1164,68 @@ $imgHeight: 32em;
         i {
             font-size: 2.5rem;
         }
+    }
+}
+
+.loader {
+    background-color: $primary;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    z-index: 99;
+
+
+    &--container {
+        width: inherit;
+        height: inherit;
+        display: grid;
+        place-items: center;
+    }
+
+    .load {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+
+        span {
+            background-color: $secondary;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+
+            &:nth-of-type(1) {
+                animation-name: strink;          
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+            &:nth-of-type(2) {
+                animation-name: strink;          
+                animation-duration: 1s;
+                animation-delay: .25s;
+                animation-iteration-count: infinite;
+            }
+            &:nth-of-type(3) {
+                animation-name: strink;          
+                animation-duration: 1s;
+                animation-delay: .5s;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        @keyframes strink {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
     }
 }

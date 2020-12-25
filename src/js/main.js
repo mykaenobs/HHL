@@ -180,11 +180,13 @@ const cardSlide = (function() {
 })();
 
 
-navbar.init();
-headerSlider.init();
-cardSlide.init();
-
-window.addEventListener('resize', function() {
+document.documentElement.style.overflow = 'hidden';
+document.addEventListener('DOMContentLoaded', function() {
+    navbar.init();
+    headerSlider.init();
     cardSlide.init();
-    console.log('resizing')
+
+    document.documentElement.style.overflow = 'auto';
+    document.querySelector('.loader').style.display = 'none';
+    console.log('yes done loading');
 })
